@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "./ui/marquee";
-
+import Image from "next/image";
 const reviews = [
   {
     name: "Rust",
@@ -35,7 +35,12 @@ const reviews = [
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);
 
-const ToolsScroll = ({ img, name }) => {
+interface ToolsScrollProps {
+  img: string;
+  name: string;
+}
+
+const ToolsScroll = ({ img, name }: ToolsScrollProps) => {
   return (
     <figure
       className={cn(
@@ -44,7 +49,7 @@ const ToolsScroll = ({ img, name }) => {
       )}
     >
       <div className="flex flex-col items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <Image className="rounded-full" width="32" height="32" alt="" src={img} />
         <figcaption className="text-sm font-medium">{name}</figcaption>
       </div>
     </figure>
