@@ -16,6 +16,9 @@ export default function Home() {
       <ToolsMarquee />
       <SocialHeadline />
       {/* <SocialCard/> */}
+      <div className="bg-black text-white text-center items-center">
+        made with ❤️ and ☕ by mrb1nary
+      </div>
     </>
   );
 }

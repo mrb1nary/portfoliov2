@@ -2,13 +2,22 @@
 import React from "react";
 import { SparklesCore } from "./ui/sparkles";
 import SocialCard from "./social-cards";
+import { Bungee_Spice } from "next/font/google";
+
+const bungeeSpice = Bungee_Spice({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export function SocialHeadline() {
   return (
     <div className="h-full w-full pb-[10rem] bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
+      <h3
+        className={`md:text-5xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20 ${bungeeSpice.className}`}
+      >
         Let&apos;s Connect
-      </h1>
+      </h3>
+
       <div className="w-[40rem] h-40 relative">
         {/* Gradients */}
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
