@@ -1,3 +1,5 @@
+"use client";
+
 import { HyperText } from "./ui/hyper-text";
 
 interface HyperTextComponentProps {
@@ -5,5 +7,5 @@ interface HyperTextComponentProps {
 }
 
 export function HyperTextComponent({ text }: HyperTextComponentProps) {
-  return <HyperText>{text}</HyperText>;
+  return <HyperText startOnView={true}>{text}</HyperText>;
 }

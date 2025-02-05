@@ -37,8 +37,8 @@ export function HyperText({
   duration = 8,
   delay = 0,
   as: Component = "div",
-  startOnView = false,
-  animateOnHover = true,
+  startOnView = true,
+  animateOnHover = false,
   characterSet = DEFAULT_CHARACTER_SET,
   ...props
 }: HyperTextProps) {
@@ -62,31 +62,45 @@ export function HyperText({
 
   // Handle animation start based on view or delay
   useEffect(() => {
-    if (!startOnView) {
-      const startTimeout = setTimeout(() => {
-        setIsAnimating(true);
-      }, delay);
-      return () => clearTimeout(startTimeout);
-    }
+    if (!startOnView) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
+        console.log("Intersection Entry:", {
+          isIntersecting: entry.isIntersecting,
+          boundingClientRect: entry.boundingClientRect,
+          intersectionRatio: entry.intersectionRatio,
+        });
+
         if (entry.isIntersecting) {
+          console.log("Element is in view");
           setTimeout(() => {
             setIsAnimating(true);
           }, delay);
           observer.disconnect();
         }
       },
-      { threshold: 0.1, rootMargin: "-30% 0px -30% 0px" }
+      {
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1], // Multiple thresholds
+        rootMargin: "0px 0px 0px 0px", // Reset margin
+      }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    const currentElement = elementRef.current;
+    if (currentElement) {
+      console.log("Observing element:", currentElement);
+      observer.observe(currentElement);
+    } else {
+      console.error("No element reference found");
     }
 
-    return () => observer.disconnect();
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
   }, [delay, startOnView]);
+
 
   // Handle scramble animation
   useEffect(() => {

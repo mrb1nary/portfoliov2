@@ -2,6 +2,8 @@
 import React from "react";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { HeroText } from "./morphing-text";
+import { HyperTextComponent } from "./hyper-text";
+import { TypingAnimationComponent } from "./typing";
 
 export function HeroSpotlight() {
   return (
@@ -17,9 +19,9 @@ export function HeroSpotlight() {
         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
           Developer
         </h1>
-        <p className="mt-4 text-sm sm:text-base text-neutral-300 max-w-lg mx-auto px-2">
-          Jack of all tech, master of Rust
-        </p>
+        
+          <TypingAnimationComponent text="Jack of All Tech, Master of Rust"/>
+        
       </div>
     </div>
   );

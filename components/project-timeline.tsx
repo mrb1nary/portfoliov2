@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
@@ -6,6 +8,7 @@ export function ProjectTimeline() {
   const data = [
     {
       title: "ReputeChain",
+      url: "https://repute-chain.vercel.app/",
       content: (
         <div>
           <p className="text-white text-xs md:text-sm font-normal mb-8">
@@ -34,6 +37,7 @@ export function ProjectTimeline() {
     },
     {
       title: "Solana Payment Splitter",
+      url: "https://solana-payment-splitter.vercel.app/",
       content: (
         <div>
           <p className="text-white text-xs md:text-sm font-normal mb-8">
@@ -61,6 +65,7 @@ export function ProjectTimeline() {
     },
     {
       title: "Solana Trading Bot",
+      url: "https://github.com/mrb1nary/solana-trading-bot",
       content: (
         <div>
           <p className="text-white text-xs md:text-sm font-normal mb-8">
@@ -95,6 +100,7 @@ export function ProjectTimeline() {
 
     {
       title: "Rust Blockchain",
+      url: "https://github.com/mrb1nary/rust-blockchain",
       content: (
         <div>
           <p className="text-white text-xs md:text-sm font-normal mb-8">
@@ -129,6 +135,7 @@ export function ProjectTimeline() {
 
     {
       title: "Amazon Web Clone",
+      url: "https://clone-ad6ce.web.app/",
       content: (
         <div>
           <p className="text-white text-xs md:text-sm font-normal mb-8">
@@ -156,12 +163,12 @@ export function ProjectTimeline() {
 
     {
       title: "....and much more",
+      url: "#",
       content: (
         <div>
           <p className="text-white text-xs md:text-sm font-normal mb-8">
             Follow me on socials to stay updated with my latest projects
           </p>
-          
         </div>
       ),
     },
