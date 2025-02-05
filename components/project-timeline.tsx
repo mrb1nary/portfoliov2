@@ -167,7 +167,7 @@ export function ProjectTimeline() {
     },
   ];
   return (
-    <div className="w-screen h-screen bg-black">
+    <div className="w-screen bg-black mb-30">
       <Timeline data={data} />
     </div>
   );
