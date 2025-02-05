@@ -1,10 +1,5 @@
 "use client";
-import {
-  
-  useScroll,
-  useTransform,
-  motion,
-} from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -39,11 +34,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl">
-          Changelog from my journey
+          Rust, React & Regrets (Just Kidding!) | My Tech Journey
         </h2>
         <p className="text-white text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
+          From wrangling MERN stacks to navigating the depths of Rust and
+          Solana, my journey has been an adventure in code. Over the years,
+          I&apos;ve built, broken, and rebuilt—learning something new at every
+          step. Here&apos;s a glimpse into my evolution as a developer, one
+          project at a time
         </p>
       </div>
 
