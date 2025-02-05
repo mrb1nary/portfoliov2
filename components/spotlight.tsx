@@ -2,7 +2,6 @@
 import React from "react";
 import { Spotlight } from "@/components/ui/spotlight-new";
 import { HeroText } from "./morphing-text";
-import { HyperTextComponent } from "./hyper-text";
 import { TypingAnimationComponent } from "./typing";
 
 export function HeroSpotlight() {
