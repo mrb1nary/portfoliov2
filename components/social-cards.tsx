@@ -9,14 +9,13 @@ import {
 } from "react-icons/fa";
 
 const SocialCard = () => {
-
-    const handleGmailClick = () => {
-      const email = "anubhab.techie@gmail.com";
-      navigator.clipboard.writeText(email).then(() => {
-        alert("Email copied to clipboard!");
-      });
-      window.open(`mailto:${email}`);
-    };
+  const handleGmailClick = () => {
+    const email = "anubhab.techie@gmail.com";
+    navigator.clipboard.writeText(email).then(() => {
+      alert("Email copied to clipboard!");
+    });
+    window.open(`mailto:${email}`);
+  };
   return (
     <StyledWrapper>
       <div className="cards">
@@ -36,10 +35,7 @@ const SocialCard = () => {
           <FaGithub size={40} />
           <p className="tip">Github</p>
         </div>
-        <div
-          className="card gmail"
-          onClick={() => handleGmailClick()}
-        >
+        <div className="card gmail" onClick={() => handleGmailClick()}>
           <FaEnvelope size={40} />
           <p className="tip">GMail</p>
         </div>
@@ -54,7 +50,7 @@ const SocialCard = () => {
           className="card resume"
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1RNRszFJEV3fqmPG9SImk3GVChR-skrvM/view?usp=drive_link"
+              "https://drive.google.com/file/d/1_VUcJaq18BOBHpyF-da6PFyv6IcdRe1L/view?usp=sharing"
             )
           }
         >

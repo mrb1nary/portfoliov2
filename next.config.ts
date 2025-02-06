@@ -7,4 +7,8 @@ const nextConfig: NextConfig = {
 //   output: "export",
 // };
 
+module.exports = {
+  output: "standalone",
+};
+
 export default nextConfig;
